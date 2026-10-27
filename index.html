@@ -132,6 +132,13 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-r
 .career li:first-child::before{background:var(--accent);border-color:var(--accent)}
 .career li.sub{color:var(--muted)}
 .career li.sub::before{display:none}
+.chg{align-self:flex-start;font-size:11.5px;font-weight:700;color:var(--warn);background:var(--warn-bg);padding:2px 8px;border-radius:6px}
+.chip.chgc{background:var(--warn-bg);color:var(--warn)}
+.chip.outc{background:var(--bad-bg);color:var(--bad);margin-top:6px}
+.person.out .avatar,.person.out .career{opacity:.55}
+.slot .lc{display:block;font-weight:400;font-size:12.5px;color:var(--muted);margin-top:1px}
+.slot{align-items:flex-start}
+.slot .t{padding-top:1px}
 .empty{font-size:13.5px;color:var(--muted);margin-top:12px}
 .foot{margin-top:24px;font-size:11.5px;color:var(--muted);text-align:center}
 @media (prefers-reduced-motion:no-preference){.view{animation:in .18s ease-out}@keyframes in{from{transform:translateY(6px)}to{transform:none}}}
@@ -176,12 +183,12 @@ const CO={
   {n:"Mathias Lepeut",t:"VP Cargo America",s:"확인",c:["Vice President Cargo @ Qatar Airways (2023.05~) / Miami Base","Senior Regional Manager Cargo @ Qatar Airways (2019.04~2023.04) / CDG Base, South Europe Area","Cargo Manager France & Italy @ Qatar Airways (2015.12~2019.04) / Paris Base","Commercial Director in charge of air freight @ CMA CGM (2013.04~2015.09) / Marseille Base","Area Revenue Manager Outbound Americas @ AFKL (2010.10~2013.03)","Revenue Management Inbound Asia Middle East Africa @ AFKL (2009.06~2010.10)","Manager Central Customer Allotment Desk @ AFKL (2005.10~2007) / Netherlands Base","Sector Manager Revenue Management @ Air France Cargo Division (2001.09~2005.09) / US Base","Consultant Audit Department @ Air France Corporate Division (2000.07~2001.08) / CDG HQ","Flight Analyst @ Air France Cargo Division (1997.10~2000.06)"]},
   {n:"Ronny De Lange",t:"Regional Manager",s:"일부 확인",c:["Regional Manager Central Europe @ Qatar Airways (2021~) / 독일·오스트리아·스위스·헝가리·체코 담당","Vice President Sales Central & Eastern Europe / VP Global Corporate Account Mgmt @ Etihad Airways (2010~2020)","Airline Career @ Lufthansa (2001~2010)"]}]},
  CI:{name:"China Airlines",code:"CI",people:[{n:"May Lee",t:"Cargo Manager",s:"미확인",c:[]}]},
- UA:{name:"United Cargo",code:"UA",people:[{n:"Rob Siegfried",t:"Regional Manager",s:"확인",c:["Sr. Regional Manager - Cargo Sales @ United Airlines (2022.06~) / Eastern Region","Cargo Manager IAD @ Emirates SkyCargo (2012.08~2022.06) / IAD Base","Airline @ Coyne Airways (2010.01~2012.07)"]}],note:["27일 United Dinner 참석 (LX Pantos: Bryan Kim, Seung Jun Eom, Claudio Di Zio, Timothy Yi)"]},
+ UA:{name:"United Cargo",code:"UA",people:[{n:"Rob Siegfried",t:"Regional Manager",s:"확인",c:["Sr. Regional Manager - Cargo Sales @ United Airlines (2022.06~) / Eastern Region","Cargo Manager IAD @ Emirates SkyCargo (2012.08~2022.06) / IAD Base","Airline @ Coyne Airways (2010.01~2012.07)"]}],note:["27일 United Dinner 참석 (LX Pantos: Bryan Kim, Seung Jun Eom, James, Claudio Di Zio, Timothy Yi)"]},
  AI:{name:"Air India",code:"AI",people:[{n:"John Land",t:"Sales Director",s:"미확인",c:[]}]},
  ROT:{name:"Rotate",code:"",people:[{n:"Ray Zedov",t:"Commercial Director",s:"일부 확인",c:["Commercial Director @ Rotate (2026.01~)","Senior Manager, Cargo Strategy @ American Airlines (2024.07~2025.12) / DFW Base","Manager, Cargo Business Planning & Analytics @ American Airlines (2022.07~2024.07) / DFW Base","Team Lead, Cargo Revenue Management Strategy @ American Airlines (2021.07~2022.07) / DFW Base","Analyst, Cargo Sales Planning and Performance @ American Airlines (2020.03~2021.07) / DFW Base","Senior Analyst, Sales Operations & Analytics @ Charter Communications (2018.03~2020.03) / DFW Base","Sales Incentive Compensation 관련 경력 @ Charter Communications (2013.02~2018.03) / Morrisville Base"]}],note:["회사: 2022년 설립 네덜란드 항공화물 데이터·컨설팅 (CargoTech)","2026.6 DBC (Data Build Company) 인수"]},
  AC:{name:"Air Canada Cargo",code:"AC",people:[{n:"Erick Lopez",t:"Chief Commercial (확인 필요)",s:"미확인",c:["Inside Sales Manager @ Air Canada Cargo (2023.08~) / Miami Base","GSA - Inside Sales Agent @ Air Canada (2022.04~2023.08) / Miami Base","Senior Cargo Agent @ Emirates SkyCargo (2018.05~2022.03) / Miami Base","Cargo Agent @ Tristar Cargo (2017.01~2018.05) / Miami Base"]}],note:["AC Cargo MD: Matthieu Casey (Managing Director, Commercial)","2026.9 Nicolas Saignat, Sr. Director Cargo Sales Americas 신규 선임"]},
  MSC:{name:"MSC Air Cargo",code:"",people:[{n:"Parvan Guenadiev",t:"Strategic Account Manager Americas / Commercial & Business Development Manager USA",s:"일부 확인",c:["Strategic Account Manager Americas @ MSC Air Cargo (2025.04~)","Commercial & Business Development Manager USA - Air Cargo @ MSC Air Cargo (2023.09~) / New York Base","Senior Commercial Account Manager @ PayCargo (2022.03~2023.09) / New York Base","Senior Sales Executive @ Emirates SkyCargo (2021.06~2022.03) / New York Base","Sales Executive @ Emirates SkyCargo (2016.03~2021.06) / New York Base","Sales Manager @ Aviacargo, Inc. (2013.10~2016.03)","Supervisor @ Aerosvit Airlines (2008.02~2013.01) / New York Base"]}]},
- CX:{name:"Cathay Cargo",code:"CX",people:[{n:"Kenneth Murray",t:"Global Partnership Manager",s:"확인",c:["Cargo Global Partnership Manager, Americas @ Cathay Pacific Airways (2019.04~) / New York Base","Sales Agent @ CAL Cargo Airlines Ltd. (2018.10~2019.04) / New York Base","Sales Manager @ HAE (2013.08~2018.10)","Sales Manager @ Aviacargo, Inc. (2011.12~2013.04)","Personal Banker @ JPMorgan Chase (2008.12~2010.10)","Financial Advisor @ Ameriprise Financial (2008.06~2008.10)","Assistant Manager @ Nippon Cargo Airlines (2001.02~2008.06)","Cargo Sales & Services Supervisor @ Cathay Pacific Airways (1995~2001)","Sales Representative @ Evergreen International Airlines, Inc. (1992~1995)"]}]},
+ CX:{name:"Cathay Cargo",code:"CX",note:["Kenneth Murray Laid off → 신규 담당자 참석 예정 (이름 미정)"],people:[{n:"신규 담당자 (미정)",t:"Cathay Cargo · 이름 확인 후 업데이트",noLi:1,c:[]},{n:"Kenneth Murray",out:"Laid off · 불참",t:"Global Partnership Manager",s:"확인",c:["Cargo Global Partnership Manager, Americas @ Cathay Pacific Airways (2019.04~) / New York Base","Sales Agent @ CAL Cargo Airlines Ltd. (2018.10~2019.04) / New York Base","Sales Manager @ HAE (2013.08~2018.10)","Sales Manager @ Aviacargo, Inc. (2011.12~2013.04)","Personal Banker @ JPMorgan Chase (2008.12~2010.10)","Financial Advisor @ Ameriprise Financial (2008.06~2008.10)","Assistant Manager @ Nippon Cargo Airlines (2001.02~2008.06)","Cargo Sales & Services Supervisor @ Cathay Pacific Airways (1995~2001)","Sales Representative @ Evergreen International Airlines, Inc. (1992~1995)"]}]},
  CK:{name:"China Cargo Airlines",code:"CK",people:[{n:"Homing Tam",t:"Director Sales of Marketing",s:"",c:[]}]},
  DHL:{name:"DHL (ATC Aviation)",code:"",people:[{n:"Brenda Russell",t:"Director, DHL Aviation National Key Accounts - ATC Aviation",s:"확인",c:["DHL Aviation National Key Account Director - ATC Aviation Services USA LLC (2023.01~) / US Base","Global Key Account Manager @ Cargolux Airlines (2003.01~2022.01) / US Base"]}]},
  "5Y":{name:"Atlas Air",code:"5Y",people:[{n:"Frank Diaz",t:"Sr. Director, Sales & Marketing, Network Planning & South America",s:"",c:["Sr. Director, Sales & Marketing, Network Planning & South America @ Atlas Air (2022.04~) / Miami Base","Director, Sales & Marketing, Network Planning & South America @ Atlas Air (2018.11~2022.04) / Miami Base","Sr. Manager, Network Planning & Business Excellence @ Atlas Air (2015.07~2018.11) / Miami Base","Sr. Revenue Analyst @ Atlas Air (2010.06~2015.07) / Miami Base","Attorney @ The Frank Law Group, PA (2019.08~) / Miami Base","Royal Caribbean Cruises, Ltd. 근무 (2003.06~2009.06) / Miami Base"]}]},
@@ -194,9 +201,10 @@ const CO={
 const DAYS=[
  {id:"26",date:"2026-10-26",md:"10/26",dow:"월",en:"MON",m:[
   {s:"10:00",e:"11:00",co:["JL"],t:"Japan Airlines (JL)",loc:"Unconfirmed (JL confirm later)",locWarn:1,who:["Masaru Uchida - Sales Director"],k:"외부 미팅"},
-  {s:"15:30",e:"16:30",co:["EY"],t:"Etihad Cargo (EY)",loc:"EY Booth (1001B)",who:["Caroline Elizabeth Pappas - General Manager America"],k:"외부 미팅"},
+  {s:"11:00",e:"14:00",co:[],t:"Booth Preparation",loc:"OUR- ICN Booth (601B)",who:["LX Pantos 부스 준비"],k:"내부"},
   {s:"18:00",e:"20:00",co:["IIAC"],t:"IIAC",loc:"-",who:["IIAC Dinner"],k:"Dinner"}]},
  {id:"27",date:"2026-10-27",md:"10/27",dow:"화",en:"TUE",m:[
+  {s:"09:00",e:"09:30",co:[],t:"인천공항 참석자 전체 사진 촬영",loc:"OUR- ICN Booth (601B)",who:["Picture time"],k:"내부"},
   {s:"09:30",e:"10:30",co:["TK"],t:"Turkish Cargo (TK)",loc:"OUR- ICN Booth (601B)",who:["Sertaç Yazıcı - Regional Key Account Management (Americas)","Hakan Ankara - Cargo Director, Central & South America","Meliksah Türkmen - Regional Cargo Marketing Manager, Americas"],k:"외부 미팅"},
   {s:"10:30",e:"11:00",co:["ELV"],t:"Elevation Logistics",loc:"OUR- ICN Booth (601B)",who:["Michael Paterno"],k:"외부 미팅"},
   {s:"11:00",e:"11:30",co:["LA"],t:"LATAM Cargo (LA)",loc:"LA Booth (713B)",who:["Vanessa Llosa - Offline Stations, North East and South East Manager"],k:"외부 미팅"},
@@ -206,16 +214,17 @@ const DAYS=[
   {s:"15:00",e:"16:00",co:["DL"],t:"Delta Cargo (DL)",loc:"DL Booth (501B)",who:["N.A. Sales Team"],k:"외부 미팅"},
   {s:"16:00",e:"17:00",co:["QR"],t:"Qatar Airways Cargo (QR)",loc:"OUR- ICN Booth (601B)",who:["Rahul Sudarshan - Head of Global Key Accounts (Americas)","Mathias Lepeut - VP Cargo America","Ronny De Lange - Regional Manager"],k:"외부 미팅"},
   {s:"17:00",e:"18:00",co:["CI"],t:"China Airlines (CI)",loc:"OUR- ICN Booth (601B)",who:["May Lee - Cargo Manager"],k:"외부 미팅"},
-  {s:"20:00",e:"22:00",co:["UA"],t:"United (UA) Dinner",loc:"Lido Bayside at The Standard Hotel",who:["United Dinner","LX Pantos: Bryan Kim, Seung Jun Eom, Claudio Di Zio, Timothy Yi"],k:"Dinner"}]},
+  {s:"20:00",e:"22:00",co:["UA"],t:"United (UA) Dinner",loc:"Lido Bayside at The Standard Hotel",who:["United Dinner","LX Pantos: Bryan Kim, Seung Jun Eom, James, Claudio Di Zio, Timothy Yi"],k:"Dinner"}]},
  {id:"28",date:"2026-10-28",md:"10/28",dow:"수",en:"WED",m:[
   {s:"10:30",e:"11:30",co:["AI"],t:"Air India (AI)",loc:"ABDA Group H",who:["John Land - Sales Director"],k:"외부 미팅"},
   {s:"11:30",e:"12:30",co:["ROT","AC"],t:"Rotate & Air Canada (AC)",loc:"OUR- ICN Booth (601B)",who:["Ray Zedov (Rotate)","Erick Lopez (AC) - Chief Commercial (확인필요)"],k:"외부 미팅"},
   {s:"12:00",e:"12:45",co:["UA"],t:"United Cargo (UA)",loc:"UA Booth (211B)",who:["Rob Siegfried - Regional Manager"],k:"외부 미팅"},
   {s:"13:00",e:"14:00",co:["MSC"],t:"MSC Air Cargo",loc:"OUR- ICN Booth (601B)",who:["Parvan Guenadiev - Strategic Account Manager Americas"],k:"외부 미팅"},
   {s:"14:00",e:"15:00",co:["LHLX"],t:"LX & LH",loc:"LX/LH Booth (HS 101)",who:["-"],k:"외부 미팅"},
-  {s:"15:00",e:"16:00",co:["CX"],t:"Cathay Cargo (CX)",loc:"CX Booth (431B)",who:["Kenneth Murray - Global Partnership Manager"],k:"외부 미팅"},
+  {s:"15:00",e:"16:00",co:["CX"],t:"Cathay Cargo (CX)",loc:"CX Booth (431B)",who:["신규 담당자 참석 예정 (미정)","Kenneth Murray - Laid off, 불참"],k:"외부 미팅",chg:"담당자 변경"},
   {s:"16:00",e:"17:00",co:["CK"],t:"China Cargo Airlines (CK)",loc:"OUR- ICN Booth (601B)",who:["Homing Tam - Director Sales of Marketing"],k:"외부 미팅"},
-  {s:"17:00",e:"18:00",co:["DHL"],t:"DHL (ATC Aviation)",loc:"OUR- ICN Booth (601B)",who:["Brenda Russell - Director, DHL Aviation National Key Accounts"],k:"외부 미팅"}]},
+  {s:"17:00",e:"17:30",co:["EY"],t:"Etihad Cargo (EY)",loc:"EY Booth (1001B)",who:["Caroline Elizabeth Pappas - General Manager America"],k:"외부 미팅",chg:"26일(월) 15:30 → 변경"},
+  {s:"17:30",e:"18:00",co:["DHL"],chg:"17:00 → 30분 연기",t:"DHL (ATC Aviation)",loc:"OUR- ICN Booth (601B)",who:["Brenda Russell - Director, DHL Aviation National Key Accounts"],k:"외부 미팅"}]},
  {id:"29",date:"2026-10-29",md:"10/29",dow:"목",en:"THU",m:[
   {s:"13:00",e:"13:30",co:["5Y"],t:"Atlas Air (5Y)",loc:"Atlas (LINCOLN BALL ROOM D)",who:["Frank Diaz - Sr. Director, Sales & Marketing, Network Planning & South America"],k:"외부 미팅"},
   {s:"14:00",e:"15:00",co:["EK"],t:"Emirates SkyCargo (EK)",loc:"EK Booth",who:["Christel Alaimo - VP Cargo, the Americas","Juan Gil - Senior Cargo Commercial"],k:"외부 미팅"}]}
@@ -265,22 +274,22 @@ function homeView(){
     <section class="day">
       <div class="day-h"><div class="dt"><div class="big">${d.md}<small>${d.dow}요일</small>${d.date===todayISO?'<span class="tag-today">TODAY</span>':""}</div><div class="meta">${d.m.length}건 · ${d.m[0].s}–${d.m[d.m.length-1].e}</div></div>
         <button class="sel" data-day="${d.id}">선택<svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button></div>
-      <ul class="slots">${d.m.map(m=>`<li><button class="slot" data-co="${m.co.join(",")}"><span class="t">${m.s}</span><span class="nm">${esc(m.t)}</span>${m.k!=="외부 미팅"?kindChip(m.k):""}${ICON_ARR}</button></li>`).join("")}</ul>
+      <ul class="slots">${d.m.map(m=>`<li><button class="slot" data-co="${m.co.join(",")}"><span class="t">${m.s}</span><span class="nm">${esc(m.t)}<span class="lc">${esc(m.loc&&m.loc!=="-"?m.loc:"장소 미정")}</span></span>${m.chg?'<span class="chip chgc">변경</span>':""}${m.k!=="외부 미팅"?kindChip(m.k):""}${m.co.length?ICON_ARR:'<span style="width:16px;flex:none"></span>'}</button></li>`).join("")}</ul>
     </section>`).join("")}</div>
-  <p class="foot">기준: Meeting Profile list v4 · 2026.10.25 업데이트 · 현지(마이애미) 시간</p></div>`;
+  <p class="foot">기준: Meeting Profile list v5 · 2026.10.27 업데이트 · 현지(마이애미) 시간</p></div>`;
 }
 
 function meetingCard(m,showDate){
   return `<button class="mt" data-co="${m.co.join(",")}">
     <div class="tc"><span class="s">${m.s}</span><span class="e">~ ${m.e}</span><span class="dur">${durTxt(m.s,m.e)}</span></div>
     <div class="bd">
-      <div class="top"><span class="co">${esc(m.t)}</span>${kindChip(m.k)}</div>
+      <div class="top"><span class="co">${esc(m.t)}</span>${kindChip(m.k)}</div>${m.chg?`<span class="chg">${esc(m.chg)}</span>`:""}
       <dl class="kv">
         ${showDate?`<dt>Date</dt><dd class="mono">${showDate}</dd>`:""}
         <dt>Location</dt><dd class="${m.locWarn?"warnline":""}">${esc(m.loc)}</dd>
         <dt>Person</dt><dd>${m.who.map(w=>`<span class="p">${esc(w)}</span>`).join("")}</dd>
       </dl>
-      <span class="go">프로필 보기${ICON_GO}</span>
+      ${m.co.length?`<span class="go">프로필 보기${ICON_GO}</span>`:""}
     </div></button>`;
 }
 
@@ -297,10 +306,10 @@ function coView(ids){
       <div class="ttl"><span class="nm">${esc(c.name)}</span>${c.code?`<span class="code">${esc(c.code)}</span>`:""}</div>
       ${c.note?`<div class="note">${c.note.map(n=>`<p>${esc(n)}</p>`).join("")}</div>`:""}
     </div>
-    ${c.people.map(p=>`<article class="person">
-      <div class="row"><div class="avatar">${PHOTOS[p.n]?`<img src="${PHOTOS[p.n]}" alt="${esc(p.n)}">`:GHOST}</div><div class="who"><div class="nm">${esc(p.n)}</div><div class="ti">${esc(p.t)}</div>
-        <a class="li" href="https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(p.n+' '+c.name)}" target="_blank" rel="noopener"><b>in</b>LinkedIn에서 찾기</a></div></div>
-      ${p.c.length?`<ul class="career">${p.c.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>`:`<p class="empty">공개된 프로필 정보를 찾지 못했습니다.</p>`}
+    ${c.people.map(p=>`<article class="person${p.out?" out":""}">
+      <div class="row"><div class="avatar">${PHOTOS[p.n]?`<img src="${PHOTOS[p.n]}" alt="${esc(p.n)}">`:GHOST}</div><div class="who"><div class="nm">${esc(p.n)}</div><div class="ti">${esc(p.t)}</div>${p.out?`<span class="chip outc">${esc(p.out)}</span>`:""}
+        ${p.noLi?"":`<a class="li" href="https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(p.n+' '+c.name)}" target="_blank" rel="noopener"><b>in</b>LinkedIn에서 찾기</a>`}</div></div>
+      ${p.c.length?`<ul class="career">${p.c.map(l=>`<li>${esc(l)}</li>`).join("")}</ul>`:`<p class="empty">${p.noLi?"참석자 이름이 확인되면 업데이트합니다.":"공개된 프로필 정보를 찾지 못했습니다."}</p>`}
     </article>`).join("")}`}).join("");
   return `<div class="view">
   <div class="head"><span class="eyebrow">Profiles</span><h1 class="h1">${esc(coLabel(ids))}</h1></div>
@@ -316,7 +325,7 @@ app.addEventListener("click",e=>{
   const dayBtn=e.target.closest("[data-day]");
   if(dayBtn){go({v:"day",id:dayBtn.dataset.day});return}
   const coBtn=e.target.closest("[data-co]");
-  if(coBtn){go({v:"co",co:coBtn.dataset.co.split(",")})}
+  if(coBtn&&coBtn.dataset.co){go({v:"co",co:coBtn.dataset.co.split(",")})}
 });
 home();
 </script>
